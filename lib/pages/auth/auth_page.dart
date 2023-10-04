@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_siakad_app/bloc/login/login_bloc.dart';
-import 'package:flutter_siakad_app/data/models/request/auth_request_model.dart';
 
+import '../../bloc/login/login_bloc.dart';
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart';
 import '../../common/widgets/buttons.dart';
@@ -67,7 +66,7 @@ class _AuthPageState extends State<AuthPage> {
                   },
                 );
               },
-              label: 'MAHASISWA',
+              label: 'LOGIN',
             ),
             const SizedBox(height: 32.0),
             const Text.rich(
