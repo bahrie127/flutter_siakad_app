@@ -38,8 +38,8 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
           right: 20,
           left: 20,
           bottom: MediaQuery.of(context).viewInsets.bottom),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
+      child: ListView(
+        // mainAxisSize: MainAxisSize.min,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -98,7 +98,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
                     orElse: () {},
                     loaded: (data) {
                       AuthLocalDatasource().saveAuthData(data);
-                      if (data.user.roles == 'mahasiswa') {
+                      if (data.user.roles == 'admin') {
                         Navigator.pushReplacement(context,
                             MaterialPageRoute(builder: (context) {
                           return const MahasiswaPage();

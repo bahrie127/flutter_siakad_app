@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_siakad_app/pages/mahasiswa/absensi_page.dart';
 import 'package:flutter_siakad_app/pages/mahasiswa/jadwal_matkul_page.dart';
 import 'package:flutter_siakad_app/pages/mahasiswa/nilai_mk_page.dart';
+import 'package:flutter_siakad_app/pages/mahasiswa/widgets/sample_map_page.dart';
 
 import '../../bloc/khs/khs_bloc.dart';
 import '../../common/constants/colors.dart';
@@ -39,6 +40,18 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
             Row(
               children: [
+                IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SampleMapPage()));
+                  },
+                  icon: const Icon(
+                    Icons.map,
+                    color: ColorName.green,
+                  ),
+                ),
                 IconButton(
                   onPressed: () {
                     Navigator.push(
